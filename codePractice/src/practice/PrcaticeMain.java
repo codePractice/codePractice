@@ -3,8 +3,32 @@ package practice;
 import java.util.ArrayList;
 
 public class PrcaticeMain {
-
-	//중복된 문자열 중복제거해서 List 리턴하기 
+		
+		//FIZBUZZ문제 1~100까지 출력하고 3으로 나누어떨어지면 Fizz 5로 나누어 떨어지면 Buzz 3과 5로 모두 나누어 떨어지면 FizzBuzz를 출력 
+		public static void FizzBuzz() {
+			
+			for(int i =1; i <= 100; i++) {
+				
+				
+				if(i%3 == 0 && i%5 == 0) {
+					System.out.println("FizzBuzz");
+				}else if(i % 3 == 0) {
+					System.out.println("Fizz");
+				}else if(i % 5 == 0) {
+					System.out.println("Buzz");
+				}else {
+					System.out.println(i);
+				}
+				
+				
+				
+			}
+			
+			
+		}
+		
+		
+		//중복된 문자열 중복제거해서 List 리턴하기 
 		public static void p72() {
 			int[] iarr = { 11, 11, 12, 1, 2, 3, 3, 4, 4, 5 };
 
@@ -14,16 +38,13 @@ public class PrcaticeMain {
 			for (int i = 0; i < iarr.length; i++) {
 
 				list.add(iarr[i]);
-
-			}
-
-			for (int i = 0; i < list.size(); i++) {
-
-				if (list2.contains(list.get(i)) == false) {
-					list2.add(list.get(i));
+				
+				if(!list2.contains(iarr[i])) {
+					list2.add(iarr[i]);
 				}
 
 			}
+
 
 			for (int i = 0; i < list2.size(); i++) {
 
@@ -67,9 +88,34 @@ public class PrcaticeMain {
 			
 		}
 
-		public static void main(String[] args) {
-			System.out.println(p74(")("));
+		//라이브러리를 사용하지않고 문자를 뒤집는 문제 
+		public static String p71(String question) {
 			
+			String answer = "";
+			
+			
+			
+		
+			for(int i = question.length()-1 ; i >= 0; i--) {
+				
+				answer += question.charAt(i);
+			}
+			
+			
+			
+			return answer;
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		public static void main(String[] args) {
+			p72();
+		
 		}
 
 }
