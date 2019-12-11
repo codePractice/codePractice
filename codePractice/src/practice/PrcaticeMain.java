@@ -1,8 +1,31 @@
 package practice;
 
+
+
 import java.util.ArrayList;
 
+import java.util.Scanner;
+
+
 public class PrcaticeMain {
+	
+	
+	public static void main(String[] args) {
+		
+
+	   PracticeMethod prac = new PracticeMethod();
+	   
+	   prac.P1092();
+		
+		
+		
+	}
+		 
+		 
+		
+	
+	
+	
 		
 		//FIZBUZZ문제 1~100까지 출력하고 3으로 나누어떨어지면 Fizz 5로 나누어 떨어지면 Buzz 3과 5로 모두 나누어 떨어지면 FizzBuzz를 출력 
 		public static void FizzBuzz() {
@@ -113,9 +136,6 @@ public class PrcaticeMain {
 		
 		
 		
-		public static void main(String[] args) {
-			p72();
 		
-		}
 
 }
