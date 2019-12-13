@@ -1,4 +1,4 @@
-package practice;
+package practice100;
 
 
 
@@ -15,7 +15,7 @@ public class PrcaticeMain {
 
 	   PracticeMethod prac = new PracticeMethod();
 	   
-	   prac.P1092();
+	   prac.P1093();
 		
 		
 		
