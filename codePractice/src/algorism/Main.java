@@ -15,7 +15,7 @@ public class Main {
 		//ss.sort();
 		//bs.sort();
 		//is.sort();
-		qs.sort(data, 0, 9);
+		qs.sort(data, 0, data.length-1);
 		
 		for(int i = 0; i < data.length; i++) {
 			System.out.print(data[i] + " ");
