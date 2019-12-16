@@ -13,7 +13,7 @@ public class BubbleSort {
 	
 	public void sort() {
 		
-		System.out.println("Bubbls Sort 실행");
+		System.out.println("Bubble Sort 실행");
 		
 		
 		for(int i = 0; i < iarr.length; i++) {
