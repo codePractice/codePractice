@@ -44,6 +44,8 @@ public class QuickSort {
 			while( left <= end && data[left] <= data[key] ) {
 				left++; // 피벗보다 큰값을 찾을때까지 오른쪽으로 한칸씩 전진
 			}
+			
+			//right > start 인 이유는 start가 피벗값이기 떄문에 거기까지 가면안됨 
 			while(right > start && data[right] >= data[key] ) { //왼쪽으로 계속가되 시작점을 넘어서면안됨 
 				right--; //피벗보다 작은값을 찾을때까지 왼쪽으로 전진 
 			}

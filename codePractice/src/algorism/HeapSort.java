@@ -14,72 +14,6 @@ package algorism;
 public class HeapSort {
 
 	
-	public static void heapSort2() {
-		
-		int temp;
-		int heap[] = {7,6,5,8,3,10,9,1,6};
-		
-		
-		for(int i = 0; i < heap.length; i++) {
-			
-			int c = i;
-			
-			do {
-				
-			int root = (c - 1) / 2;
-				
-			if(heap[root] < heap[c]) {
-
-				temp = heap[root];
-				heap[root] = heap[c];
-				heap[c] = temp;
-			}
-			
-			c = root;
-			
-			}while(c != 0);
-			
-		}
-		
-		
-		
-		for(int i = heap.length-1; i >= 0; i--) {
-			
-			temp = heap[i];
-			heap[i] = heap[0];
-			heap[0] = temp;
-			
-			int root = 0; 
-			int c = 1; 
-			
-			do {
-			
-			c = 2 * root + 1;
-				
-			
-			if(c < i-1 && heap[c] < heap[c+1]) {
-				c++;
-			}
-			
-			if( c < i && heap[root] < heap[c]) {
-				temp = heap[root];
-				heap[root] = heap[c];
-				heap[c] = temp;
-			}
-				
-			root = c; 
-			
-			}while(c < i);
-			
-			
-		}
-		
-		for(int i = 0; i < heap.length; i++) {
-			System.out.print(heap[i] + " ");
-		}
-		
-		
-	}
 	
 	public static void heapSort() {
 		
@@ -123,14 +57,14 @@ public class HeapSort {
 				
 				System.out.println("c : " + c  + ", root : " + root + ", i : " + i);
 				
-				if(c < i-1 && heap[c] < heap[c+1]) {//자식 중에 더 큰 값을 찾는다  c가 i-1보다 커져버리면 이미 정렬된 마지막 값까지 비교해버림 
+				if(c < i-1 && heap[c] < heap[c+1]) {//자식 중에 더 큰 값을 찾는다  c+1 때문에 i는  c-1 보다 작아야함 
 					c++;
 				}
 				//루트보다 자식이 더 크다면 교환 
 				if( c < i && heap[root] < heap[c]) {
 					temp = heap[root];
 					heap[root] = heap[c];
-					heap[c] =temp;
+					heap[c] =temp; // c는 i보다 작아야한다 왜냐면 i값은 제일 큰값으로서 이미 정렬되어있기 때문 
 					
 				}
 				
@@ -151,7 +85,7 @@ public class HeapSort {
 	
 	public static void main(String[] args) {
 		
-		heapSort2();
+		heapSort();
 	}
 	
 	

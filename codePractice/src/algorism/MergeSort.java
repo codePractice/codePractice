@@ -25,7 +25,6 @@ package algorism;
 
 public class MergeSort {
 
-	int number = 8;
 	int sorted[] = new int[9];
 
 	public void merge(int[] data, int m, int middle, int n) {
