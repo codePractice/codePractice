@@ -3,7 +3,7 @@ package baekjun;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import algorism.MergeSort;
+import algorism.sort.MergeSort;
 
 public class Main {
 	
